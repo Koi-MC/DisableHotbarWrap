@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "disablehotbarwrap",
+  "version": "1.0-MC1.21.1",
+  "name": "Disable Hotbar Wrap",
+  "description": "Prevents hotbar from wrapping around when scrolling",
+  "authors": ["Koi_Pond"],
+  "contact": {
+    "sources": "https://github.com/Koi-MC"
+  },
+  "license": "All Rights Reserved",
+  "icon": "assets/disablehotbarwrap/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "koi.pond.disablehotbarwrap.DisablehotbarwrapClient"
+    ]
+  },
+  "mixins": [
+    "disablehotbarwrap.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}

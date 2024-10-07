@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "koi.pond.disablehotbarwrap.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+  ],
+  "mixins": [
+    "PlayerInventoryMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
