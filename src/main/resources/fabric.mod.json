@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "disablehotbarwrap",
-  "version": "1.0-MC1.21.1",
+  "version": "1.0-MC1.21.2",
   "name": "Disable Hotbar Wrap",
   "description": "Prevents hotbar from wrapping around when scrolling",
   "authors": ["Koi_Pond"],
@@ -17,7 +17,7 @@
     ]
   },
   "mixins": [
-    "disablehotbarwrap.mixins.json"
+      "disablehotbarwrap.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=${loader_version}",
