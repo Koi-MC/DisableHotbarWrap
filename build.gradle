@@ -38,17 +38,20 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loom:${project.loom_version}"
 }
 
+def modVersion = project.properties["mod_version"]
 def minecraftVersion = project.properties["minecraft_version"]
 def loaderVersion = project.properties["loader_version"]
 
 processResources {
+    inputs.property "mod_version", modVersion
     inputs.property "version", project.version
     inputs.property "minecraft_version", minecraftVersion
     inputs.property "loader_version", loaderVersion
     filteringCharset "UTF-8"
 
     filesMatching("fabric.mod.json") {
-        expand "version": project.version,
+        expand "mod_version": modVersion,
+                "version": project.version,
                 "minecraft_version": minecraftVersion,
                 "loader_version": loaderVersion
     }
