@@ -47,7 +47,7 @@ processResources {
     inputs.property "version", project.version
     inputs.property "minecraft_version", minecraftVersion
     inputs.property "loader_version", loaderVersion
-    filteringCharset "UTF-8"
+    filteringCharset = "UTF-8"
 
     filesMatching("fabric.mod.json") {
         expand "mod_version": modVersion,
