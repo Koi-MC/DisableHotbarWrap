@@ -8,8 +8,8 @@ Fabric mod which stops your hotbar from wrapping around when you scroll through 
 - General Quality of Life
 
 ### Dependencies
-- Fabric API
+- Fabric API Required for mod versions below Minecraft 26.1
 - (Optional) Mod Menu
 
 ### Install
-Simply place the mod jar into your mods folder, no configurations required. Requires Fabric API.
+Simply place the mod jar into your mods folder, no configurations required. Requires Fabric API when using mod versions below Minecraft 26.1.
