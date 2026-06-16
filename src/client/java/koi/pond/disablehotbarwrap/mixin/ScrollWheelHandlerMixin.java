@@ -13,9 +13,9 @@ public class ScrollWheelHandlerMixin {
      * Prevents hotbar from wrapping around when scrolling - also applies to bundles
      */
     @Inject(method = "getNextScrollWheelSelection", at = @At("HEAD"), cancellable = true)
-    private static void getNextScrollWheelSelection(double amount, int selectedIndex, int total, CallbackInfoReturnable<Integer> cir) {
-        int i = (int)Math.signum(amount);
-        selectedIndex -= i;
+    private static void getNextScrollWheelSelection(double wheel, int currentSelected, int limit, CallbackInfoReturnable<Integer> cir) {
+        int i = (int)Math.signum(wheel);
+        currentSelected -= i;
 
         /*
         // Unused (?)
@@ -30,13 +30,13 @@ public class ScrollWheelHandlerMixin {
 
         // Prevent wrapping
         // Note that "total" is important because bundles have variable "total" values
-        if (selectedIndex < 0) {
-            selectedIndex = 0; // Set to the first index
-        } else if (selectedIndex >= total) {
-            selectedIndex = total - 1; // Set to the last index
+        if (currentSelected < 0) {
+            currentSelected = 0; // Set to the first index
+        } else if (currentSelected >= limit) {
+            currentSelected = limit - 1; // Set to the last index
         }
 
-        cir.setReturnValue(selectedIndex);
+        cir.setReturnValue(currentSelected);
         //return selectedIndex;
     }
 }
